@@ -1,0 +1,115 @@
+body {
+  background: #eeeeee;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: crimson;
+}
+
+img {
+  max-width: 100%;        /*MAKES IMAGES RESPONSIVE*/
+  height: auto;
+}
+
+
+/* Layout
+------------------------------------------*/
+
+header,
+.container,
+footer {
+  margin: 0 auto;
+  width: 88%;
+  max-width: 1080px;
+  padding: 2em;
+}
+
+footer {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 1em 0;
+  background: #ffffff;
+}
+
+
+/* Flexbox
+------------------------------------------*/
+
+.gallery, 
+.gallery-2, 
+.gallery-3, 
+.gallery-4, 
+.gallery-5, 
+.gallery-6, 
+.gallery-7,
+.gallery-8,
+.gallery-9,
+.gallery-10 {
+  display: flex;
+  flex-wrap: wrap; /*makes it stack underneath for responsive*/
+  background: cornflowerblue;   /*REMOVE THIS IF YOU DON'T WANT A BACKGROUND COLOR*/
+}
+
+.gallery img, 
+.gallery-2 img, 
+.gallery-3 img, 
+.gallery-4 img, 
+.gallery-5 img, 
+.gallery-6 img, 
+.gallery-7 img,
+.gallery-8 img,
+.gallery-9 img,
+.gallery-10 img {
+  display: block;   /*GETS RID OF SMALL SPACE AT BOTTOM OF LOWEST IMAGE*/
+}
+
+.gallery {
+  justify-content: flex-end; /* RIGHT ALIGNMENT*/
+}
+
+.gallery-2 {
+  justify-content: center;   /* CENTER ALIGNMENT*/
+}
+
+.gallery-3 {
+  justify-content: space-between;   /* SPACE BETWEEN ITEMS*/
+}
+
+.gallery-4 {
+  justify-content: space-around;   /* SPACE AROUND ITEMS*/
+}
+
+.gallery-5 .eat-your-veggies {
+  order: -1;      /* puts it first, see csstricks.com for more info */
+}
+
+.gallery-6 {
+  flex-direction: row-reverse;     /*exacly what it says on the tin */
+}
+
+.gallery-7 {
+  flex-direction: column;    /* same */
+}
+
+.gallery-8 {
+  flex-direction: column;    /* same */
+  align-items: center;
+}
+
+.gallery-9 {
+  align-items: flex-end;   /* align to the bottom of the tallest item */
+}
+
+.gallery-10 {
+  align-items: center;   /* even space top and bottom */
+}

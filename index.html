@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox - the fuck you up sQUAD edition</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://use.fontawesome.com/b562907630.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="prism.css">
+</head>
+
+<body>
+  <header>
+    <h1>Flexbox - the fuck you up sQUAD edition</h1>
+  </header>
+  <div class="wrapper">
+    <div class="container">
+      <p>Flexboxes are super handy when it comes to making responsive websites, so I made myself a reference page for all the different ways you can apply and sort them. I'm also figure skating trash, so.</p>
+      <h2>Let's Get Started!</h2>
+      <h3>HTML</h3>
+      <pre><code class="language-markup">&lt;div class="gallery"&gt;
+  &lt;div&gt;&lt;img src="images/boyang.jpg" alt="Boyangsta">&lt;/div&gt;
+  &lt;div&gt;&lt;img src="images/shoma.jpg" alt="Shomajesty">&lt;/div&gt;
+  &lt;div&gt;&lt;img src="images/nathan.jpg" alt="Slaythan">&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>CSS</h3>
+      <pre><code class="language-css">.gallery {
+  display: flex;
+  flex-wrap: wrap;  /* STACKS UNDERNEATH WHEN SCREEN RESIZED FOR MOBILES */
+  background: cornflowerblue;   /* REMOVE THIS IF YOU DON'T WANT A BACKGROUND COLOR */
+}
+
+.gallery img  {
+  display: block;   /* GETS RID OF SMALL SPACE AT BOTTOM OF LOWEST IMAGE */
+}</code></pre>
+      <h2>Flex Alignment</h2>
+      <h3>Flex End</h3>
+      <pre><code class="language-css">.gallery {
+  justify-content: flex-end;
+}</code></pre>
+      <div class="gallery">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Flex Center</h3>
+      <pre><code class="language-css">.gallery {
+  justify-content: center;
+}</code></pre>
+      <div class="gallery-2">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Flex Space-Between</h3>
+      <pre><code class="language-css">.gallery {
+  justify-content: space-between;
+}</code></pre>
+      <div class="gallery-3">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Flex Space-Around</h3>
+      <pre><code class="language-css">.gallery {
+  justify-content: space-around;
+}
+</code></pre>
+      <div class="gallery-4">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h2>Flex Ordering</h2>
+      <h3>Specific Order</h3>
+      <pre><code class="language-markup">&lt;div class="gallery"&gt;
+  &lt;div&gt;&lt;img src="images/boyang.jpg" alt="Boyangsta"&gt;&lt;/div&gt;
+  &lt;div class="eat-your-veggies"&gt;&lt;img src="images/shoma.jpg" alt="Shomajesty"&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img src="images/nathan.jpg" alt="Slaythan"&gt;&lt;/div&gt;
+&lt;/div></code></pre>
+      <pre><code class="language-css">.gallery .eat-your-veggies {
+  order: -1;    /* THIS CHANGES THE ORDER OF THE IMAGES, USEFUL FOR CHANGING ORDER FOR REPSPONSIVE DESIGN */
+}</code></pre>
+      <div class="gallery-5">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div class="eat-your-veggies"><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h2>Flex Direction</h2>
+      <h3>Reverse order</h3>
+      <pre><code class="language-css">.gallery {
+  flex-direction: row-reverse;
+}</code></pre>
+      <div class="gallery-6">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Column</h3>
+      <pre><code class="language-css">.gallery {
+  flex-direction: column;
+}</code></pre>
+      <div class="gallery-7">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Column Center Align</h3>
+      <pre><code class="language-css">.gallery {
+  flex-direction: column;
+  align-items: center;
+}</code></pre>
+      <div class="gallery-8">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h2>Flex Alignment</h2>
+      <h3>Flex End Alignment</h3>
+      <pre><code class="language-css">.gallery {
+  align-items: flex-end;
+}</code></pre>
+      <div class="gallery-9">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+      <h3>Flex Center Alignment</h3>
+      <pre><code class="language-css">.gallery {
+  align-items: center;
+}</code></pre>
+      <div class="gallery-10">
+        <div><img src="images/boyang.jpg" alt="Boyangsta"></div>
+        <div><img src="images/shoma.jpg" alt="Shomajesty"></div>
+        <div><img src="images/nathan.jpg" alt="Slaythan"></div>
+      </div>
+    </div>
+    <!-- .container-->
+  </div>
+  <!-- .wrapper-->
+  <footer>
+     <p>Brought to you by the letter N-for-no-chill &middot; <a href="http://morozombie.blogspot.co.nz/2016/09/the-new-quadsters.html" target="_new">good luck, don't die</a><br>'the fuck you up sQUAD' courtesy of <a href="http://theyoungprinceandprincess.tumblr.com/" target="_new">theyoungprinceandprincess</a> & <a href="http://magicaleggplant.tumblr.com/" target="_new">magicaleggplant</a><br><a href="https://github.com/evelynmaire/"><i class="fa fa-github" aria-hidden="true"></i></a> <a href="http://iristigerlily.tumblr.com/"><i class="fa fa-tumblr" aria-hidden="true"></i></a> <a href="https://twitter.com/_rinchansan"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
+  </footer>
+  <script src="prism.js"></script>
+</body>
+
+</html>
